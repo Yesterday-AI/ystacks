@@ -6,7 +6,7 @@
   <p><em>Yesterday's PUBLIC Claude Code plugin catalog. Public-tauglich plugins, no Yesterday-infra deps.</em></p>
 
   <p>
-    A thin marketplace catalog that lists Yesterday's public Claude Code plugins. Generic-tauglich means: no dependency on Yesterday infrastructure -- any team can install and use these plugins. The companion <a href="https://github.com/Yesterday-AI/ystacks-internal">ystacks-internal</a> catalog (private) hosts the Yesterday-team-internal counterparts.
+    A thin marketplace catalog that lists Yesterday's PUBLIC Claude Code plugins. Generic-tauglich means: no dependency on Yesterday infrastructure -- any team can install and use these plugins.
   </p>
 
   <p>
@@ -51,9 +51,9 @@ No auth required -- ystacks is public.
 | [yopstack](https://github.com/Yesterday-AI/yopstack) | github `Yesterday-AI/yopstack` | Ops core -- 4 skills for provisioning, deployment, and observability (`opentofu`, `land-and-deploy`, `canary`, `setup-deploy`). |
 | [ydstack](./plugins/ydstack) | local subdir `./plugins/ydstack` | Daily-work -- 14 skills for human productivity, creative, and knowledge work (excalidraw, PARA memory, scrapers, miro, figma, voxtral, niche verticals). |
 
-## Companion: ystacks-internal
+## Companion: ystacks-internal (private)
 
-Yesterday-team needs the same plugins PLUS Yesterday-internal service-clients (clawrag, llm-gateway, paperclip-companies, agent-services, openclaw, cloud) and bundle plugins that compose them. The companion private catalog [`Yesterday-AI/ystacks-internal`](https://github.com/Yesterday-AI/ystacks-internal) lists those.
+Yesterday-team has a separate private catalog with internal-only plugins and Yesterday-bundle plugins (`-internal` suffix) that compose public plugins with Yesterday-infra service-clients. Org members can request access via Yesterday-AI.
 
 External users do not need it; ystacks alone provides the public Yesterday plugin family.
 
@@ -62,7 +62,7 @@ External users do not need it; ystacks alone provides the public Yesterday plugi
 Mixed-visibility marketplaces (public catalog listing private plugins) leak plugin names + descriptions while users cannot install. The 2026-04-25 architecture session split into two catalogs, one per visibility:
 
 - **ystacks** (this repo, public) -- only plugins that work without Yesterday-infra.
-- **[ystacks-internal](https://github.com/Yesterday-AI/ystacks-internal)** (private) -- internal-only, plus bundle plugins (`yastack-internal`, `yopstack-internal`) that wrap public plugins via cross-marketplace dependencies.
+- A private companion catalog exists for Yesterday-team-internal plugins (request access via Yesterday-AI).
 
 Each plugin has its own repo with its own `.ytstack/DECISIONS.md` for per-plugin architectural choices.
 
@@ -72,7 +72,7 @@ A plugin earns a listing here if:
 
 1. Lives in its own `Yesterday-AI/<name>` repo (or `./plugins/<name>/` subdir if it's a skill collection that shares ystacks's lifecycle).
 2. Has a tagged release with a valid `.claude-plugin/plugin.json`.
-3. Has **no Yesterday-infra dependencies** (otherwise it belongs in ystacks-internal).
+3. Has **no Yesterday-infra dependencies** (otherwise it belongs in the private companion catalog).
 4. Follows Yesterday's plugin standards (see [ytstack/CONTRIBUTING.md](https://github.com/Yesterday-AI/ytstack/blob/main/CONTRIBUTING.md) as the reference).
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for the PR workflow.
