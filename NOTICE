@@ -1,0 +1,35 @@
+ystacks
+Copyright 2026 Yesterday
+
+Yesterday's PUBLIC Claude Code plugin catalog. Lists generic-tauglich plugins
+(no Yesterday-infra deps). Plus hosts `plugins/ydstack/` as a monorepo subdir.
+
+---
+
+## Listed plugins
+
+Each plugin in the catalog carries its own LICENSE and NOTICE in its respective
+repository. Installing a plugin via this catalog fetches it directly from its
+upstream source; ystacks does not interpose, modify, or redistribute plugin
+code (with the exception of `plugins/ydstack/` which is hosted in this repo).
+
+See `.claude-plugin/marketplace.json` for the authoritative list.
+
+---
+
+## Companion catalog
+
+The private companion catalog `Yesterday-AI/ystacks-internal` hosts
+Yesterday-team-internal plugins (clawrag, llm-gateway, paperclip-companies,
+etc.) and bundle plugins (yastack-internal, yopstack-internal) that compose
+public + internal via cross-marketplace dependencies.
+
+---
+
+## Claude Code
+
+ystacks is a marketplace catalog for Claude Code, a product of Anthropic.
+<https://claude.com/code>
+
+The marketplace format and `marketplace.json` schema are part of Claude Code's
+public extension API.

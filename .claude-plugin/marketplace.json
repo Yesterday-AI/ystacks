@@ -1,0 +1,65 @@
+{
+  "name": "ystacks",
+  "description": "Yesterday's PUBLIC plugin catalog for Claude Code -- generic-tauglich plugins (no Yesterday-infra deps).",
+  "owner": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "plugins": [
+    {
+      "name": "yastack",
+      "description": "Agent core -- generic skills for AI agents in human-AI collaboration and AI-as-expert workflows (Levels of AGI 3-4). Public, no Yesterday-infra deps.",
+      "source": {
+        "source": "github",
+        "repo": "Yesterday-AI/yastack"
+      },
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "agentic",
+        "autonomous-agents",
+        "agent-orchestration",
+        "yesterday-ai"
+      ]
+    },
+    {
+      "name": "yopstack",
+      "description": "Ops core -- generic infrastructure-provisioning, deployment, and observability skills. Public, no Yesterday-infra deps.",
+      "source": {
+        "source": "github",
+        "repo": "Yesterday-AI/yopstack"
+      },
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "ops",
+        "deployment",
+        "infrastructure",
+        "observability",
+        "yesterday-ai"
+      ]
+    },
+    {
+      "name": "ydstack",
+      "description": "Daily-work stack -- generic productivity, creative, and knowledge skills for humans (excalidraw, PARA memory, web/x scrapers, slack, miro, figma, voxtral, niche verticals). Skills do NOT need .ytstack/ project state.",
+      "source": "./plugins/ydstack",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "productivity",
+        "daily-work",
+        "creative"
+      ]
+    }
+  ]
+}

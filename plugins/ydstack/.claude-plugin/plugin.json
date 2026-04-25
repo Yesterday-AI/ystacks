@@ -1,0 +1,20 @@
+{
+  "name": "ydstack",
+  "version": "0.0.1",
+  "description": "Yesterday Daily Stack -- generic productivity, creative, and knowledge skills for daily work. Skills that do NOT require .ytstack/ project state.",
+  "author": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "homepage": "https://github.com/Yesterday-AI/ystacks/tree/main/plugins/ydstack",
+  "repository": "https://github.com/Yesterday-AI/ystacks",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "yesterday-ai",
+    "productivity",
+    "daily-work",
+    "knowledge-management",
+    "creative"
+  ]
+}
