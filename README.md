@@ -45,11 +45,29 @@ No auth required -- ystacks is public.
 
 ## What's in the catalog
 
+12 plugins -- 4 stacks + 8 own-plugins (cross-imported by stacks per v8 triage).
+
+### Stacks
+
 | Plugin | Source | Purpose |
 |---|---|---|
-| [yastack](https://github.com/Yesterday-AI/yastack) | github `Yesterday-AI/yastack` | Agent core -- 15 generic skills for AI agents at [Levels-of-AGI](https://arxiv.org/html/2311.02462v5#S6) 3-4 (Collaborator / Expert). Migrating from [`agentic-foundation`](https://github.com/Yesterday-AI/agentic-foundation). |
-| [yopstack](https://github.com/Yesterday-AI/yopstack) | github `Yesterday-AI/yopstack` | Ops core -- 4 skills for provisioning, deployment, and observability (`opentofu`, `land-and-deploy`, `canary`, `setup-deploy`). |
-| [ydstack](./plugins/ydstack) | local subdir `./plugins/ydstack` | Daily-work -- 14 skills for human productivity, creative, and knowledge work (excalidraw, PARA memory, scrapers, miro, figma, voxtral, niche verticals). |
+| [yastack](https://github.com/Yesterday-AI/yastack) | github `Yesterday-AI/yastack` | Agent core -- 14 generic skills for AI agents at [Levels-of-AGI](https://arxiv.org/html/2311.02462v5#S6) 3-4 (Collaborator / Expert). Imports creative-productivity + para-memory-files + skill-creator. |
+| [yopstack](https://github.com/Yesterday-AI/yopstack) | github `Yesterday-AI/yopstack` | Ops core -- 1 skill shipped (`opentofu`); 3 gstack skills pending vendor (`land-and-deploy`, `canary`, `setup-deploy`). Imports skill-creator. |
+| [ydstack](./plugins/ydstack) | local subdir `./plugins/ydstack` | Daily-work -- 6 skills (exa-search-api, excalidraw-diagram, slack-best-practices, using-github, web-scraper, x-reader) + 7 cross-mp imports (creative-productivity, figma-console-mcp, miro-board, para-memory-files, skill-creator, voxtral-tts-api, vrr-efa-api). |
+| [ycstack](./plugins/ycstack) | local subdir `./plugins/ycstack` | Consulting placeholder -- no skills yet. Yesterday-team consulting skills live in private `ycstack-internal`. Imports skill-creator. |
+
+### Own-plugins (cross-imported by stacks)
+
+| Plugin | Source | Imported by |
+|---|---|---|
+| [creative-productivity](./plugins/creative-productivity) | local subdir | yastack, ydstack |
+| [figma-console-mcp](./plugins/figma-console-mcp) | local subdir | ydstack |
+| [miro-board](./plugins/miro-board) | local subdir | ydstack |
+| [para-memory-files](./plugins/para-memory-files) | local subdir | yastack, ydstack |
+| [skill-creator](./plugins/skill-creator) | local subdir | all 5 stacks |
+| [voxtral-tts-api](./plugins/voxtral-tts-api) | local subdir | ydstack |
+| [vrr-efa-api](./plugins/vrr-efa-api) | local subdir | ydstack |
+| [web-design](./plugins/web-design) | local subdir | ytstack |
 
 ## Companion: ystacks-internal (private)
 
@@ -82,9 +100,18 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the PR workflow.
 ```
 ystacks/
 ├── .claude-plugin/
-│   └── marketplace.json     the public catalog
+│   └── marketplace.json     the public catalog (12 plugins)
 ├── plugins/
-│   └── ydstack/             daily-work skill collection (subdir)
+│   ├── ydstack/             daily-work skill collection (6 skills + 7 cross-mp imports)
+│   ├── ycstack/             consulting placeholder
+│   ├── creative-productivity/   own-plugin (deliverables orchestrator)
+│   ├── figma-console-mcp/   own-plugin (Figma MCP)
+│   ├── miro-board/          own-plugin (Miro MCP)
+│   ├── para-memory-files/   own-plugin (PARA agent memory)
+│   ├── skill-creator/       own-plugin (meta-skill, imported by all 5 stacks)
+│   ├── voxtral-tts-api/     own-plugin (Mistral TTS)
+│   ├── vrr-efa-api/         own-plugin (DE regional transit)
+│   └── web-design/          own-plugin (frontend craft, imported by ytstack)
 ├── README.md                this file
 ├── CLAUDE.md                contributor guide for AI agents
 ├── CONTRIBUTING.md          contributor guide for humans
@@ -95,7 +122,7 @@ ystacks/
 
 ## Status
 
-**v0.1.0 -- public catalog launch (2026-04-25).** Three plugins listed (yastack, yopstack, ydstack). yastack + yopstack are scaffolds (no skills migrated yet -- pending agentic-foundation + vendor/gstack work). ydstack is also a scaffold. ytstack (engineering OS) lives in [`Yesterday-AI/ytstack`](https://github.com/Yesterday-AI/ytstack) but is currently private; it will be listed here once it goes public.
+**Migration complete (2026-04-26).** 12 plugins listed: 4 stacks (yastack, yopstack, ydstack, ycstack) + 8 own-plugins (creative-productivity, figma-console-mcp, miro-board, para-memory-files, skill-creator, voxtral-tts-api, vrr-efa-api, web-design). Skills migrated from `agentic-foundation` per [MIGRATION-TRIAGE.md v8 FROZEN](https://github.com/Yesterday-AI/agentic-foundation/blob/main/MIGRATION-TRIAGE.md). yopstack still pending the gstack vendor subtree for `land-and-deploy` / `canary` / `setup-deploy`. ytstack (engineering OS) lives in [`Yesterday-AI/ytstack`](https://github.com/Yesterday-AI/ytstack), currently private + cross-listed in `ystacks-internal`; it will be listed here once it flips public.
 
 ## License
 
