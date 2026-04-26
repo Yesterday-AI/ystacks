@@ -60,6 +60,156 @@
         "daily-work",
         "creative"
       ]
+    },
+    {
+      "name": "ycstack",
+      "description": "Consulting workflows -- public placeholder. Yesterday-team-internal consulting skills live in ycstack-internal (private bundle in ystacks-internal).",
+      "source": "./plugins/ycstack",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "consulting",
+        "workflows"
+      ]
+    },
+    {
+      "name": "creative-productivity",
+      "description": "Generate professional consulting deliverables: Excalidraw diagrams, Mermaid visualizations, Reveal.js/Marp presentations, draw.io architecture diagrams, one-pagers, proposal documents.",
+      "source": "./plugins/creative-productivity",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "deliverables",
+        "consulting",
+        "diagrams",
+        "presentations"
+      ]
+    },
+    {
+      "name": "figma-console-mcp",
+      "description": "Figma + FigJam + Slides automation via Figma Console MCP server. Design system extraction, UI component creation, variable/token management.",
+      "source": "./plugins/figma-console-mcp",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "figma",
+        "design-system",
+        "mcp",
+        "ui"
+      ]
+    },
+    {
+      "name": "miro-board",
+      "description": "Create and read Miro board content via MCP -- diagrams, documents, tables, context extraction.",
+      "source": "./plugins/miro-board",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "miro",
+        "diagrams",
+        "mcp",
+        "whiteboard"
+      ]
+    },
+    {
+      "name": "para-memory-files",
+      "description": "File-based memory system using Tiago Forte's PARA method. Agent-side persistence across sessions.",
+      "source": "./plugins/para-memory-files",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "memory",
+        "persistence",
+        "para",
+        "knowledge-management"
+      ]
+    },
+    {
+      "name": "skill-creator",
+      "description": "Meta-skill for creating new agent skills. Templates, quality checklist, agentskills.io spec compliance.",
+      "source": "./plugins/skill-creator",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "meta-skill",
+        "agent-development",
+        "skill-templates"
+      ]
+    },
+    {
+      "name": "voxtral-tts-api",
+      "description": "Mistral Voxtral TTS API client. Natural expressive speech in 9 languages, voice cloning, streaming, cross-lingual synthesis.",
+      "source": "./plugins/voxtral-tts-api",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "tts",
+        "voice",
+        "mistral",
+        "api-client"
+      ]
+    },
+    {
+      "name": "vrr-efa-api",
+      "description": "VRR (Verkehrsverbund Rhein-Ruhr) live transit API client. German regional transit lookups -- departures, connections, stops. No API key.",
+      "source": "./plugins/vrr-efa-api",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "transit",
+        "vrr",
+        "germany",
+        "api-client"
+      ]
+    },
+    {
+      "name": "web-design",
+      "description": "Build distinctive, production-grade frontend interfaces with high design quality. Websites, landing pages, dashboards, web apps.",
+      "source": "./plugins/web-design",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "design",
+        "frontend",
+        "ui",
+        "ux"
+      ]
     }
   ]
 }

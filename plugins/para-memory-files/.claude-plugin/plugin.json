@@ -1,0 +1,20 @@
+{
+  "name": "para-memory-files",
+  "version": "0.0.1",
+  "description": "File-based memory system using Tiago Forte's PARA method. Agent-side persistence across sessions: knowledge graph in PARA folders, working memory, journal entries.",
+  "author": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "homepage": "https://github.com/Yesterday-AI/ystacks/tree/main/plugins/para-memory-files",
+  "repository": "https://github.com/Yesterday-AI/ystacks",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "yesterday-ai",
+    "memory",
+    "persistence",
+    "para",
+    "knowledge-management"
+  ]
+}

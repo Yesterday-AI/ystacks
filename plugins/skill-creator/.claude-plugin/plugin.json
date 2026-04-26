@@ -1,0 +1,19 @@
+{
+  "name": "skill-creator",
+  "version": "0.0.1",
+  "description": "Meta-skill for creating new agent skills. Provides structure, templates, quality checklist, and best practices per agentskills.io spec. Use when building, reviewing, or improving skills.",
+  "author": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "homepage": "https://github.com/Yesterday-AI/ystacks/tree/main/plugins/skill-creator",
+  "repository": "https://github.com/Yesterday-AI/ystacks",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "yesterday-ai",
+    "meta-skill",
+    "agent-development",
+    "skill-templates"
+  ]
+}
