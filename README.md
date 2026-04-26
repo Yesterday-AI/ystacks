@@ -45,7 +45,7 @@ No auth required -- ystacks is public.
 
 ## What's in the catalog
 
-12 plugins -- 4 stacks + 8 own-plugins (cross-imported by stacks per v8 triage).
+12 plugins listed here (4 stacks + 8 own-plugins) + 1 planned (ytstack, currently private). Total: **5 stacks** in the family.
 
 ### Stacks
 
@@ -55,6 +55,7 @@ No auth required -- ystacks is public.
 | [yopstack](https://github.com/Yesterday-AI/yopstack) | github `Yesterday-AI/yopstack` | Ops core -- 1 skill shipped (`opentofu`); 3 gstack skills pending vendor (`land-and-deploy`, `canary`, `setup-deploy`). Imports skill-creator. |
 | [ydstack](./plugins/ydstack) | local subdir `./plugins/ydstack` | Daily-work -- 6 skills (exa-search-api, excalidraw-diagram, slack-best-practices, using-github, web-scraper, x-reader) + 7 cross-mp imports (creative-productivity, figma-console-mcp, miro-board, para-memory-files, skill-creator, voxtral-tts-api, vrr-efa-api). |
 | [ycstack](./plugins/ycstack) | local subdir `./plugins/ycstack` | Consulting placeholder -- no skills yet. Yesterday-team consulting skills live in private `ycstack-internal`. Imports skill-creator. |
+| [ytstack](https://github.com/Yesterday-AI/ytstack) | github `Yesterday-AI/ytstack` | Engineering OS for AI coding agents -- 21 skills (project-OS lifecycle + curated wrappers). **Planned for ystacks** -- currently private + cross-listed in `ystacks-internal`; will be listed here once it flips public. Imports skill-creator + web-design + yesterday-brand. |
 
 ### Own-plugins (cross-imported by stacks)
 
@@ -122,7 +123,7 @@ ystacks/
 
 ## Status
 
-**Migration complete (2026-04-26).** 12 plugins listed: 4 stacks (yastack, yopstack, ydstack, ycstack) + 8 own-plugins (creative-productivity, figma-console-mcp, miro-board, para-memory-files, skill-creator, voxtral-tts-api, vrr-efa-api, web-design). Skills migrated from `agentic-foundation` per [MIGRATION-TRIAGE.md v8 FROZEN](https://github.com/Yesterday-AI/agentic-foundation/blob/main/MIGRATION-TRIAGE.md). yopstack still pending the gstack vendor subtree for `land-and-deploy` / `canary` / `setup-deploy`. ytstack (engineering OS) lives in [`Yesterday-AI/ytstack`](https://github.com/Yesterday-AI/ytstack), currently private + cross-listed in `ystacks-internal`; it will be listed here once it flips public.
+**Migration complete (2026-04-26).** 12 plugins listed here: 4 stacks (yastack, yopstack, ydstack, ycstack) + 8 own-plugins (creative-productivity, figma-console-mcp, miro-board, para-memory-files, skill-creator, voxtral-tts-api, vrr-efa-api, web-design). Skills migrated from `agentic-foundation` per [MIGRATION-TRIAGE.md v8 FROZEN](https://github.com/Yesterday-AI/agentic-foundation/blob/main/MIGRATION-TRIAGE.md). yopstack still pending the gstack vendor subtree for `land-and-deploy` / `canary` / `setup-deploy`. **5th stack planned:** ytstack (engineering OS) lives in [`Yesterday-AI/ytstack`](https://github.com/Yesterday-AI/ytstack), currently private + cross-listed in `ystacks-internal`; will be listed here once it flips public.
 
 ## License
 
