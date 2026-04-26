@@ -1,5 +1,5 @@
 ---
-name: use-github
+name: using-github
 description: |
   Operating policies for safe GitHub interaction via the `gh` CLI and `git`.
   Use this skill before any PR edit, comment, branch operation, push, or
@@ -10,7 +10,7 @@ metadata:
   category: engineering
 ---
 
-# use-github
+# using-github
 
 Operating policies for interacting with GitHub via `gh` and `git`. Read before any PR / branch / push action. The rules below exist because each one was learned from a real failure.
 
