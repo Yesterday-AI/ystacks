@@ -16,5 +16,14 @@
     "daily-work",
     "knowledge-management",
     "creative"
+  ],
+  "dependencies": [
+    "creative-productivity",
+    "figma-console-mcp",
+    "miro-board",
+    "para-memory-files",
+    "skill-creator",
+    "voxtral-tts-api",
+    "vrr-efa-api"
   ]
 }
