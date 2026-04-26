@@ -14,5 +14,8 @@
     "yesterday-ai",
     "consulting",
     "workflows"
+  ],
+  "dependencies": [
+    "skill-creator"
   ]
 }
