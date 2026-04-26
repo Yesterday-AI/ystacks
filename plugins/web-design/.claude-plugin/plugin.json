@@ -1,0 +1,20 @@
+{
+  "name": "web-design",
+  "version": "0.0.1",
+  "description": "Build distinctive, production-grade frontend interfaces with high design quality. Use when building websites, landing pages, dashboards, web apps, or any UI that should look polished and modern.",
+  "author": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "homepage": "https://github.com/Yesterday-AI/ystacks/tree/main/plugins/web-design",
+  "repository": "https://github.com/Yesterday-AI/ystacks",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "yesterday-ai",
+    "design",
+    "frontend",
+    "ui",
+    "ux"
+  ]
+}

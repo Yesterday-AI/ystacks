@@ -1,0 +1,20 @@
+{
+  "name": "creative-productivity",
+  "version": "0.0.1",
+  "description": "Generate professional consulting deliverables: Excalidraw diagrams, Mermaid visualizations, Reveal.js/Marp presentations, draw.io architecture diagrams, one-pagers, proposal documents. Orchestrator with enriched assets over the underlying tool plugins.",
+  "author": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "homepage": "https://github.com/Yesterday-AI/ystacks/tree/main/plugins/creative-productivity",
+  "repository": "https://github.com/Yesterday-AI/ystacks",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "yesterday-ai",
+    "deliverables",
+    "consulting",
+    "diagrams",
+    "presentations"
+  ]
+}

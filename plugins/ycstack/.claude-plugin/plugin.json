@@ -1,0 +1,18 @@
+{
+  "name": "ycstack",
+  "version": "0.0.1",
+  "description": "Consulting workflows -- public placeholder. Generic-tauglich consulting skills will land here. Yesterday-team-internal consulting skills live in ycstack-internal (private bundle in ystacks-internal).",
+  "author": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "homepage": "https://github.com/Yesterday-AI/ystacks/tree/main/plugins/ycstack",
+  "repository": "https://github.com/Yesterday-AI/ystacks",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "yesterday-ai",
+    "consulting",
+    "workflows"
+  ]
+}
