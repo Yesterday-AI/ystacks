@@ -144,9 +144,9 @@ gh repo view <org>/.github-private --json visibility
 
 Interpret the result:
 
-- Exit 0 -- repo exists; read its `profile/README.md` (or equivalent) and treat the list as part of the change set.
-- "Could not resolve to a Repository" / 404 -- repo does not exist; rule does not apply for that side.
-- Auth error (401 / 403), network error, or anything else -- **stop and surface to the human**. Do NOT silently assume the rule does not apply; the repo may exist but be inaccessible to the current token (especially `.github-private`).
+- Exit 0 -- repo exists and is accessible. Read its `profile/README.md` (or equivalent) and treat the list as part of the change set.
+- 404 / "Could not resolve to a Repository" -- **AMBIGUOUS**. GitHub returns 404 both for repos that do not exist AND for private repos the current token cannot see (a deliberate security measure to avoid confirming existence). Do NOT treat 404 as "rule does not apply" without further evidence. Either verify the token sees the org's private repos (e.g. `gh auth status` confirms an account with org-member scope, and `gh api orgs/<org>/membership/{username}` returns `state: active`), or ask the human whether the convention applies.
+- Network or server error -- stop and surface to the human.
 
 **Why:** the public profile is the org's outward-facing landing page; out-of-date listings either advertise repos that 404 for non-members or hide repos that are actually public. The private landing typically uses a `Vis` column to mirror public state -- drift means org members get a wrong picture of what is shareable. Both files are easy to forget because they live in their own repos, separate from the repo whose visibility is changing.
 
