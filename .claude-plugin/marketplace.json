@@ -181,22 +181,6 @@
       ]
     },
     {
-      "name": "skill-creator",
-      "description": "Meta-skill for creating new agent skills. Templates, quality checklist, agentskills.io spec compliance.",
-      "source": "./plugins/skill-creator",
-      "author": {
-        "name": "Yesterday",
-        "url": "https://github.com/Yesterday-AI"
-      },
-      "keywords": [
-        "claude-code",
-        "yesterday-ai",
-        "meta-skill",
-        "agent-development",
-        "skill-templates"
-      ]
-    },
-    {
       "name": "voxtral-tts-api",
       "description": "Mistral Voxtral TTS API client. Natural expressive speech in 9 languages, voice cloning, streaming, cross-lingual synthesis.",
       "source": "./plugins/voxtral-tts-api",

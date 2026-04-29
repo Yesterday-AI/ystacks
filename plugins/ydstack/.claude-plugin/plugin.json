@@ -1,6 +1,6 @@
 {
   "name": "ydstack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yesterday Daily Stack -- core tier. Generic productivity, creative, and knowledge skills for daily work; nothing requires external SaaS keys at install time. Skills that do NOT require .ytstack/ project state. Optional SaaS integrations (Figma, Miro, Voxtral, VRR) live in ydstack-extras.",
   "author": {
     "name": "Yesterday",
@@ -20,6 +20,6 @@
   "dependencies": [
     "creative-productivity",
     "para-memory-files",
-    "skill-creator"
+    { "name": "skill-creator", "marketplace": "claude-plugins-official" }
   ]
 }
