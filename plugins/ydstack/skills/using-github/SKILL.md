@@ -138,11 +138,15 @@ Otherwise `git push` may use a stale credential from the macOS Keychain, overrid
 - Also sweep for sibling files in those repos (e.g. curated `IMPORTANT-REPOS.md` or similar) and surface them to the human if found.
 
 ```bash
-gh repo view <org>/.github --json visibility 2>/dev/null
-gh repo view <org>/.github-private --json visibility 2>/dev/null
+gh repo view <org>/.github --json visibility
+gh repo view <org>/.github-private --json visibility
 ```
 
-If neither exists, this rule does not apply.
+Interpret the result:
+
+- Exit 0 -- repo exists; read its `profile/README.md` (or equivalent) and treat the list as part of the change set.
+- "Could not resolve to a Repository" / 404 -- repo does not exist; rule does not apply for that side.
+- Auth error (401 / 403), network error, or anything else -- **stop and surface to the human**. Do NOT silently assume the rule does not apply; the repo may exist but be inaccessible to the current token (especially `.github-private`).
 
 **Why:** the public profile is the org's outward-facing landing page; out-of-date listings either advertise repos that 404 for non-members or hide repos that are actually public. The private landing typically uses a `Vis` column to mirror public state -- drift means org members get a wrong picture of what is shareable. Both files are easy to forget because they live in their own repos, separate from the repo whose visibility is changing.
 
