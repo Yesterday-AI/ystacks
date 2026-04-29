@@ -1,7 +1,7 @@
 {
   "name": "ydstack",
-  "version": "0.0.1",
-  "description": "Yesterday Daily Stack -- generic productivity, creative, and knowledge skills for daily work. Skills that do NOT require .ytstack/ project state.",
+  "version": "0.0.2",
+  "description": "Yesterday Daily Stack -- core tier. Generic productivity, creative, and knowledge skills for daily work; nothing requires external SaaS keys at install time. Skills that do NOT require .ytstack/ project state. Optional SaaS integrations (Figma, Miro, Voxtral, VRR) live in ydstack-extras.",
   "author": {
     "name": "Yesterday",
     "url": "https://github.com/Yesterday-AI"
@@ -19,11 +19,7 @@
   ],
   "dependencies": [
     "creative-productivity",
-    "figma-console-mcp",
-    "miro-board",
     "para-memory-files",
-    "skill-creator",
-    "voxtral-tts-api",
-    "vrr-efa-api"
+    "skill-creator"
   ]
 }

@@ -1,8 +1,8 @@
 # ydstack
 
-Yesterday Daily Stack -- generic productivity, creative, and knowledge skills for daily work.
+Yesterday Daily Stack -- **core tier**. Generic productivity, creative, and knowledge skills for daily work. Nothing in the core bundle requires external SaaS keys at install time. Optional SaaS integrations (Figma, Miro, Voxtral TTS, VRR) live in [ydstack-extras](../ydstack-extras).
 
-**Status:** Phase 3 of the agentic-foundation -> ystacks migration (2026-04-26). 5 skills migrated; using-github landed earlier.
+**Status:** Phase 3 of the agentic-foundation -> ystacks migration (2026-04-26). 5 skills migrated; using-github landed earlier. 2026-04-29: tier split -- 4 SaaS integrations moved to `ydstack-extras` (figma-console-mcp, miro-board, voxtral-tts-api, vrr-efa-api).
 
 ## Scope
 
@@ -19,17 +19,15 @@ Skills that are useful in day-to-day work and do NOT require `.ytstack/` project
 | `web-scraper` | Tiered web scraping (lightweight fetch -> full browser) |
 | `x-reader` | Twitter/X reader with login-wall + JS handling |
 
-## Cross-marketplace plugins (7, auto-pulled via plugin.json)
+## Cross-marketplace plugins (3, auto-pulled via plugin.json)
 
 | Plugin | Purpose |
 |---|---|
 | [creative-productivity](https://github.com/Yesterday-AI/ystacks/tree/main/plugins/creative-productivity) | Deliverables orchestrator (excalidraw + miro + reveal/marp + draw.io) |
-| [figma-console-mcp](https://github.com/Yesterday-AI/ystacks/tree/main/plugins/figma-console-mcp) | Figma + FigJam + Slides automation |
-| [miro-board](https://github.com/Yesterday-AI/ystacks/tree/main/plugins/miro-board) | Miro MCP client |
 | [para-memory-files](https://github.com/Yesterday-AI/ystacks/tree/main/plugins/para-memory-files) | PARA-method agent memory |
 | [skill-creator](https://github.com/Yesterday-AI/ystacks/tree/main/plugins/skill-creator) | Meta-skill for creating new skills |
-| [voxtral-tts-api](https://github.com/Yesterday-AI/ystacks/tree/main/plugins/voxtral-tts-api) | Mistral Voxtral TTS |
-| [vrr-efa-api](https://github.com/Yesterday-AI/ystacks/tree/main/plugins/vrr-efa-api) | VRR regional transit (Germany) |
+
+For optional SaaS integrations (Figma, Miro, Voxtral TTS, VRR transit) install [ydstack-extras](../ydstack-extras) alongside.
 
 ## Install
 

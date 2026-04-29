@@ -1,7 +1,7 @@
 ---
 project: ystacks
 slug: ystacks
-last_updated: 2026-04-25T00:00:00Z
+last_updated: 2026-04-29T00:00:00Z
 current_milestone: none (reactive mode)
 active_slice: none
 active_task: none
@@ -17,7 +17,8 @@ active_task: none
 |---|---|---|---|
 | yastack | scaffold (installable, no skills yet) | github `Yesterday-AI/yastack` (public) | yes |
 | yopstack | scaffold (installable, no skills yet) | github `Yesterday-AI/yopstack` (public, NEW 2026-04-25) | yes |
-| ydstack | scaffold (installable, no skills yet) | local `./plugins/ydstack/` (subdir) | yes |
+| ydstack | core tier (6 skills + 3 cross-mp imports) | local `./plugins/ydstack/` (subdir) | yes |
+| ydstack-extras | extras tier (0 skills + 4 cross-mp imports, NEW 2026-04-29) | local `./plugins/ydstack-extras/` (subdir) | yes |
 
 Plus: future listings when ready:
 - `ytstack` -- currently private, will be listed once it flips public
@@ -37,6 +38,7 @@ Plus: future listings when ready:
 
 ## Recent changes
 
+- 2026-04-29: ydstack tier split. Optional SaaS integrations (figma-console-mcp, miro-board, voxtral-tts-api, vrr-efa-api) moved from `ydstack` hard-deps into a new `ydstack-extras` wrapper plugin. ydstack core deps reduced from 7 to 3 (creative-productivity, para-memory-files, skill-creator). Triggered by user-reported install error: a single disabled extras dep (figma-console-mcp) made ydstack unloadable for users who didn't want Figma. See DECISIONS "ydstack tier split (core / extras)".
 - 2026-04-25: scaffolded as new public catalog repo (rename + new-create operation). Old `Yesterday-AI/ystacks` was renamed to `Yesterday-AI/ystacks-internal` (private, internal-only). This new repo started empty and received `plugins/ydstack/` as the only subdir transplant. yastack + yopstack listed via github source. ytstack not yet listed (still private).
 - See `.ytstack/DECISIONS.md` "ystacks created as PUBLIC catalog (rename + new-create operation)" for the architectural rationale.
 

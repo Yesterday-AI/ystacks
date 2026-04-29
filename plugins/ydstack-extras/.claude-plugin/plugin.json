@@ -1,0 +1,25 @@
+{
+  "name": "ydstack-extras",
+  "version": "0.0.1",
+  "description": "Yesterday Daily Stack -- extras tier. Optional integrations needing external SaaS accounts/keys (Figma, Miro, Voxtral TTS, VRR transit). Install alongside ydstack when you actually use these services.",
+  "author": {
+    "name": "Yesterday",
+    "url": "https://github.com/Yesterday-AI"
+  },
+  "homepage": "https://github.com/Yesterday-AI/ystacks/tree/main/plugins/ydstack-extras",
+  "repository": "https://github.com/Yesterday-AI/ystacks",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "yesterday-ai",
+    "productivity",
+    "daily-work",
+    "extras"
+  ],
+  "dependencies": [
+    "figma-console-mcp",
+    "miro-board",
+    "voxtral-tts-api",
+    "vrr-efa-api"
+  ]
+}
