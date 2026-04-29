@@ -1,6 +1,6 @@
 {
   "name": "ycstack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Consulting workflows -- public placeholder. Generic-tauglich consulting skills will land here. Yesterday-team-internal consulting skills live in ycstack-internal (private bundle in ystacks-internal).",
   "author": {
     "name": "Yesterday",
@@ -16,6 +16,6 @@
     "workflows"
   ],
   "dependencies": [
-    "skill-creator"
+    { "name": "skill-creator", "marketplace": "claude-plugins-official" }
   ]
 }

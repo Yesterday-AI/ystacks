@@ -5,6 +5,7 @@
     "name": "Yesterday",
     "url": "https://github.com/Yesterday-AI"
   },
+  "allowCrossMarketplaceDependenciesOn": ["claude-plugins-official"],
   "plugins": [
     {
       "name": "ytstack",
@@ -178,22 +179,6 @@
         "persistence",
         "para",
         "knowledge-management"
-      ]
-    },
-    {
-      "name": "skill-creator",
-      "description": "Meta-skill for creating new agent skills. Templates, quality checklist, agentskills.io spec compliance.",
-      "source": "./plugins/skill-creator",
-      "author": {
-        "name": "Yesterday",
-        "url": "https://github.com/Yesterday-AI"
-      },
-      "keywords": [
-        "claude-code",
-        "yesterday-ai",
-        "meta-skill",
-        "agent-development",
-        "skill-templates"
       ]
     },
     {
