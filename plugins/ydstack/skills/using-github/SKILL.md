@@ -129,6 +129,25 @@ Otherwise `git push` may use a stale credential from the macOS Keychain, overrid
 
 **Why:** `gh auth switch` only updates the gh CLI's internal token; it does not propagate to `git push`. Symptoms: pushing to a repo as the wrong user, "permission denied" despite `gh auth status` showing the right user.
 
+## P11: Sync org-level repo lists on visibility changes / new repos
+
+**Rule:** when adding a new repo to a GitHub org OR flipping an existing repo's visibility (private ↔ public), check whether the org maintains profile-style repo lists in `<org>/.github` (public profile) and/or `<org>/.github-private` (private member-only landing). If either exists and lists repos, update them as part of the same change set:
+
+- Public profile (`<org>/.github/profile/README.md`): list/unlist the repo in the relevant table.
+- Private landing (`<org>/.github-private/profile/README.md` or equivalent): update the visibility marker (e.g. `🌐` ↔ `🔒` columns are a common convention) and any catalog summaries that mention the repo by name.
+- Also sweep for sibling files in those repos (e.g. curated `IMPORTANT-REPOS.md` or similar) and surface them to the human if found.
+
+```bash
+gh repo view <org>/.github --json visibility 2>/dev/null
+gh repo view <org>/.github-private --json visibility 2>/dev/null
+```
+
+If neither exists, this rule does not apply.
+
+**Why:** the public profile is the org's outward-facing landing page; out-of-date listings either advertise repos that 404 for non-members or hide repos that are actually public. The private landing typically uses a `Vis` column to mirror public state -- drift means org members get a wrong picture of what is shareable. Both files are easy to forget because they live in their own repos, separate from the repo whose visibility is changing.
+
+**How to apply:** when the human asks for a visibility flip or a new-repo addition, treat the org-list update as a sibling task in the same plan, with its own PR(s) per repo. The human should not need to remind you.
+
 ## Quick reference
 
 | Situation | Command |
@@ -140,6 +159,7 @@ Otherwise `git push` may use a stale credential from the macOS Keychain, overrid
 | Read automated PR reviews | `gh pr view <num> --json comments,reviews --jq '.comments[].body, .reviews[].body'` |
 | Multi-line PR body | write to `/tmp/<file>.md`, pass `--body-file` |
 | Switch GitHub identity | `gh auth switch && gh auth setup-git` |
+| Visibility flip / new repo | also update `<org>/.github/profile/README.md` and `<org>/.github-private/profile/README.md` if they exist |
 
 ## When in doubt
 
