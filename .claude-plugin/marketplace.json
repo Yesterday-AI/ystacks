@@ -47,7 +47,7 @@
     },
     {
       "name": "ydstack",
-      "description": "Daily-work stack -- generic productivity, creative, and knowledge skills for humans (excalidraw, PARA memory, web/x scrapers, slack, miro, figma, voxtral, niche verticals). Skills do NOT need .ytstack/ project state.",
+      "description": "Daily-work stack -- core tier. Generic productivity, creative, and knowledge skills for humans (excalidraw, PARA memory, web/x scrapers, slack, GitHub, exa search). No external SaaS keys required at install time. Skills do NOT need .ytstack/ project state. For optional SaaS integrations (Figma, Miro, Voxtral, VRR), install ydstack-extras alongside.",
       "source": "./plugins/ydstack",
       "author": {
         "name": "Yesterday",
@@ -59,6 +59,23 @@
         "productivity",
         "daily-work",
         "creative"
+      ]
+    },
+    {
+      "name": "ydstack-extras",
+      "description": "Daily-work stack -- extras tier. Optional SaaS integrations needing external accounts/keys (Figma, Miro, Voxtral TTS, VRR transit). Wrapper bundle, no own skills. Install alongside ydstack.",
+      "source": "./plugins/ydstack-extras",
+      "author": {
+        "name": "Yesterday",
+        "url": "https://github.com/Yesterday-AI"
+      },
+      "keywords": [
+        "claude-code",
+        "yesterday-ai",
+        "productivity",
+        "daily-work",
+        "extras",
+        "saas-integrations"
       ]
     },
     {

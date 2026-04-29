@@ -54,3 +54,25 @@ Format for each entry:
 - `plugins/ydstack/` lives in ystacks repo (this repo).
 - ydstack-specific architectural decisions (e.g. "which niche-vertical skills are in scope") get logged in ystacks `.ytstack/DECISIONS.md` (here) when they arise, not in a separate ydstack DECISIONS.
 - If ydstack ever grows real methodology / framework code, revisit -- might warrant own repo then.
+
+---
+
+## 2026-04-29: ydstack tier split (core / extras)
+
+**Context:** ydstack `plugin.json` declared 7 hard-deps on sibling plugins (creative-productivity, figma-console-mcp, miro-board, para-memory-files, skill-creator, voxtral-tts-api, vrr-efa-api). A user installed ydstack and immediately hit a dependency error because `figma-console-mcp` was disabled in their environment. The plugin loader treats hard-deps as all-or-nothing -- one disabled extras-style integration breaks the whole bundle. Mixed shape inside the deps list: core utilities (creative-productivity, para-memory-files, skill-creator) require nothing external; extras (figma, miro, voxtral, vrr) only function with SaaS accounts/keys (vrr is region-specific to DE/NRW).
+
+**Options considered:**
+- A) Keep flat hard-deps. Document that users must enable all 7. Simplest, but the failure mode (one disabled extras → ydstack broken) is exactly what the user just hit.
+- B) Make extras "optional" / "recommended". The Claude Code plugin spec does not currently expose an optional-deps field that the marketplace honors. Would require a spec change or a soft-recommendation convention that nothing enforces.
+- C) Split into two plugin entries: `ydstack` (core, hard-deps OK) and `ydstack-extras` (wrapper bundle for the SaaS-bound siblings). Users opt into extras explicitly. Costs one extra marketplace entry and one extra wrapper plugin dir.
+
+**Chose:** C (tier split into ydstack + ydstack-extras).
+
+**Reason:** Solves the user's failure case directly: installing core no longer requires Figma/Miro/Voxtral/VRR to be enabled. Naming follows Linux/Python convention (`-extras`) -- explicit about "optional add-ons needing external accounts" rather than the more ambiguous `-extended`. Wrapper-plugin pattern is already established in the org (yastack-internal, yopstack-internal in ystacks-internal). Keeps the catalog discoverable: `/plugin install ydstack-extras@ystacks` is one obvious step for users who want them.
+
+**How to apply:**
+- `plugins/ydstack/.claude-plugin/plugin.json` deps reduced from 7 to 3: creative-productivity, para-memory-files, skill-creator. Version bumped 0.0.1 -> 0.0.2.
+- `plugins/ydstack-extras/.claude-plugin/plugin.json` is a new wrapper bundle (no own skills) with deps: figma-console-mcp, miro-board, voxtral-tts-api, vrr-efa-api.
+- `marketplace.json` lists both. ydstack description updated to mention the core/extras split + point at ydstack-extras.
+- README, ydstack/README.md, STATE.md updated for new counts (13 plugins listed; ydstack 6 skills + 3 imports; ydstack-extras 0 skills + 4 imports).
+- **Open consistency question:** ydstack still ships `exa-search-api` and `x-reader` as embedded skills, both of which need external keys/accounts. By the same tier logic those would also belong in extras. Deferred per user 2026-04-29 ("die anderen weiss ich noch nicht") -- only the 4 sibling-plugin extras moved in this PR. Revisit if/when user decides to extend the tier model to embedded skills.
